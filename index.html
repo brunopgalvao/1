@@ -3,18 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="index.css" rel="stylesheet">
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyDsv7070kbteMHEKwuXUYvhZWY9PBiwDxY"></script>
-    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Bruno Galvao</title>
   </head>
   <body>
-    <button onclick="getLocation()">Locate Me</button>
-    <button onclick="getLocationViaWatch()">Track Me</button>
-    <h1>Bruno Galvao</h1>
-    <h2>@brunopgalvao</h2>
-    <a href="https://www.linkedin.com/in/brunopgalvao/">LinkedIn</a>
-    <p id="geolocation"></p>
-    <div id="mapholder"></div>
-    <script src="geolocation/geolocation.functions.js"></script>
-  <a class="twitter-timeline" href="https://twitter.com/brunopgalvao?ref_src=twsrc%5Etfw">Tweets by brunopgalvao</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <nav>
+      <button onclick="getLocation()">Location</button>
+      <button onclick="getLocationViaWatch()">Tracking</button>
+    </nav>
+    <header>
+      <div class="map"></div>
+      <div class="name"></div>
+      <div class="linkedin"></div>
+    </header>
+    <script src="map/map.functions.js"></script>
+    <script src="name/name.functions.js"></script>
+    <script src="linkedin/linkedin.functions.js"></script>
+    <a class="twitter-timeline" href="https://twitter.com/brunopgalvao?ref_src=twsrc%5Etfw">Tweets by brunopgalvao</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </body>
 </html>

@@ -1,0 +1,14 @@
+.linkedin a {
+  text-decoration: none;
+  color: blue;
+}
+
+.connect {
+  text-align: center;
+}
+
+.connect button {
+  height:4vw;
+  width:12vw;
+  text-align: center;
+}

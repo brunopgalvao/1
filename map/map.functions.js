@@ -1,6 +1,6 @@
 // TODO: Use Prototypal Inheritance
 
-var x = document.getElementById("geolocation");
+var x = document.getElementsByClassName("map")[0];
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -22,7 +22,7 @@ function showPosition(position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
     var latlon = new google.maps.LatLng(lat, lon)
-    var mapholder = document.getElementById('mapholder')
+    var mapholder = document.getElementsByClassName("map")[0];
     mapholder.style.height = '250px';
     mapholder.style.width = '500px';
 
@@ -33,23 +33,23 @@ function showPosition(position) {
     navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
     }
 
-    var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
+    var map = new google.maps.Map(document.getElementsByClassName("map")[0], myOptions);
     var marker = new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
 }
 
 function showError(error) {
     switch(error.code) {
         case error.PERMISSION_DENIED:
-            x.innerHTML = "User denied the request for Geolocation.";
+            x.innerHTML = "<p>User denied the request for Geolocation.</p>";
             break;
         case error.POSITION_UNAVAILABLE:
-            x.innerHTML = "Location information is unavailable.";
+            x.innerHTML = "<p>Location information is unavailable.</p>";
             break;
         case error.TIMEOUT:
-            x.innerHTML = "The request to get user location timed out.";
+            x.innerHTML = "<p>The request to get user location timed out.</p>";
             break;
         case error.UNKNOWN_ERROR:
-            x.innerHTML = "An unknown error occurred.";
+            x.innerHTML = "<p>An unknown error occurred.</p>";
             break;
     }
 }
