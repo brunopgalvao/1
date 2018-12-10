@@ -1,4 +1,4 @@
-// TODO: Use Prototypal Inheritance
+// Show a map based on browser geolocation
 
 var x = document.getElementsByClassName("map")[0];
 
