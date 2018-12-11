@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import "connection/connection.css";
 @import "name/name.css";
 @import "linkedin/linkedin.css";
 
